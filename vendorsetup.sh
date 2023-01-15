@@ -20,6 +20,10 @@
 
 export OF_MAINTAINER="Akhil.R"
 export OF_TARGET_DEVICES="holland2,G"
+#Device specific changes
+export OF_FL_PATH1="/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0"
+export OF_FL_PATH2="/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1"
+
 FDEVICE="holland2"
 
 fox_get_target_device() {
