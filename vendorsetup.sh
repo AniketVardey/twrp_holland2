@@ -18,8 +18,8 @@
 # 	Please maintain this if you use this script or any part of it
 #
 
-export OF_MAINTAINER="Akhil.R"
-export OF_TARGET_DEVICES="holland2,G"
+export OF_MAINTAINER="Aniket"
+export OF_TARGET_DEVICES="mido,oxygen,holland2,G,vince"
 #Device specific changes
 export OF_FL_PATH1="/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0"
 export OF_FL_PATH2="/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1"
@@ -56,7 +56,7 @@ export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
 export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 # -- add settings for R11 --
 export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
-export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
+export OF_QUICK_BACKUP_LIST="/boot;/recovery;/system_root;/data;/vendor;/persist_image;/aboot;/modem;/sec;/efs1;/splash"
 # -- end R11 settings --
 
 #export OF_UNBIND_SDCARD_F2FS=1
@@ -74,3 +74,6 @@ if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
    	export | grep "TARGET_" >> $FOX_BUILD_LOG_FILE
   	export | grep "TW_" >> $FOX_BUILD_LOG_FILE
 fi
+
+	add_lunch_combo twrp_G-eng
+	add_lunch_combo twrp_G-userdebug
