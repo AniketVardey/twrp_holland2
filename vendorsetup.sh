@@ -59,7 +59,7 @@ export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 export OF_QUICK_BACKUP_LIST="/boot;/recovery;/system_root;/data;/vendor;/persist_image;/aboot;/modem;/sec;/efs1;/splash"
 # -- end R11 settings --
 
-#export OF_UNBIND_SDCARD_F2FS=1
+export OF_UNBIND_SDCARD_F2FS=1
 
 # run a process after formatting data to work-around MTP issues
 #export OF_RUN_POST_FORMAT_PROCESS=1
